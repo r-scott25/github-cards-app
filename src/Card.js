@@ -1,16 +1,18 @@
-import React from 'react';
-import './Card.css';
+import React from "react";
+import "./Card.css";
+
 
 class Card extends React.Component {
   render() {
+    const profile = this.props;
     return (
-    <div className="github-profile">
-      <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-      <div className="info">
-        <div className="name">Name here...</div>
-        <div className="company">Company here...</div>
+      <div className="github-profile">
+        <img src={profile.avatar_url} />
+        <div className="info">
+          <div className="name">{profile.name}</div>
+          <div className="company">{profile.company}</div>
+        </div>
       </div>
-    </div>
     );
   }
 }
